@@ -26,8 +26,12 @@ Route::get('notas', function(){
         'Cuarta Nota'
     ];
     return view('notas', ['notas' => $notas]);
-});
+})->name('notas.index');
 
 Route::get('agregar', function(){
     return view('agregar');
 });
+
+Route::get('notas/{id}/editar', function($id){
+    return 'Aquí se van a editar las notas ' .$id;
+})->name('notas.edit');
