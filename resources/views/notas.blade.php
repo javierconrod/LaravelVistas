@@ -9,7 +9,7 @@
                         <h4>{{ $nota->titulo }}</h4>
 
                         <p>
-                            {{!! $nota->contenido !!}}
+                            {!! $nota->contenido !!}
                         </p>
                     </div>
 

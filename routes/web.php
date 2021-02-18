@@ -29,8 +29,9 @@ Route::get('agregar', function(){
 });
 
 Route::get('notas/{id}/editar', function($id){
-    $nota = DB::table('notas')
+    $notas = DB::table('notas')
     ->where('id', $id)
     ->first();
-    return 'Aquí se van a editar las notas ' .$id;
+
+    return view('editar', ['notas' => $notas]);
 })->name('notas.edit');
